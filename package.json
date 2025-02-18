@@ -1,0 +1,50 @@
+{
+  "name": "web-game-tester",
+  "version": "1.0.0",
+  "description": "Automated testing tool for web-based games",
+  "main": "dist/index.js",
+  "bin": {
+    "game-test": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "node dist/cli.js test",
+    "test:config": "node dist/cli.js test --config ./test-config.json",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "dev": "ts-node src/cli.ts"
+  },
+  "keywords": [
+    "game",
+    "testing",
+    "automation",
+    "browser",
+    "e2e",
+    "playwright"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.41.0",
+    "yargs": "^17.7.2",
+    "dotenv": "^16.4.0",
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/yargs": "^17.0.33",
+    "@types/fs-extra": "^11.0.4",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
